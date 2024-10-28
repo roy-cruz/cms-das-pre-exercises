@@ -19,9 +19,10 @@ keypoints:
 {: .challenge}
 
 # Before you start
-In this set of exercises, we will learn how to do a full-scale analysis using the Worldwide LHC Computing Grid **This set of exercises will take considerably longer than the others**. Having your storage space set up may take several days, grid jobs can take a few days to run, and there can be problems. Although the actual effort for this exercise is only a few hours, you should **set aside about a week** to complete these exercises. 
+In this set of exercises, we will learn how to do a full-scale analysis using the Worldwide LHC Computing Grid **This set of exercises will take considerably longer than the others**. Having your storage space set up may take several days, grid jobs can take a few days to run, and there can be problems. Although the actual effort for this exercise is only a few hours, you should **set aside about a week** to complete these exercises. (Note: you may or may not use CRAB during CMSDAS; however, to do a real CMS analysis, you will certainly need to use CRAB and/or the storage resources at /store/user/.)
 
 If you encounter any problems with the exercise, please reach out on Mattermost or send an email to [CMSDASATLPC@fnal.gov](mailto:CMSDASATLPC@fnal.gov) with a detailed description of your problem. Outside of CMSDAS, you can find help at the [CRAB troubleshooting twiki](https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3Troubleshoot) or the [Computing Tools forum on cms-talk](https://cms-talk.web.cern.ch/c/offcomp/comptools). 
+
 
 > ## Note
 > **This section assumes that you have an account on the LPC computers
@@ -69,9 +70,9 @@ For general help or questions about CRAB, see the [CRAB FAQ](https://twiki.cern.
 
 This exercise depends on obtaining a grid certificate and VOMS membership, but does not depend on any previous exercises.
 
-After you've followed all the instructions above and installed your grid certificate, you need to verify it has all the information needed. Please install your grid certificate also on cmslpc-sl7.fnal.gov
+After you've followed all the instructions above and installed your grid certificate, you need to verify it has all the information needed. Please install your grid certificate also on cmslpc-el8.fnal.gov
 
-Login to **cmslpc-sl7.fnal.gov** and initialize your proxy:
+Login to **cmslpc-el8.fnal.gov** and initialize your proxy:
 ```shell
 voms-proxy-init -voms cms
 ```
@@ -291,7 +292,7 @@ Log file is /uscms_data/d3/username/cmsdas/CMSSW_13_0_13_mcgen/src/crabsubmit/cr
 ```
 {: .output}
 
- Now you might notice a directory called `crabsubmit` is created under `CMSSW_10_6_18/src/`. *See what is under that directory.* 
+ Now you might notice a directory called `crabsubmit` is created under `CMSSW_13_0_13_mcgen/src/`. This directory contains all the essential metadata for your CRAB job, and is your main tool for interacting with your running jobs. Use `crab status -d crabsubmit`
 
 IMPORTANT: do not modify or delete the files in this directory until you are 100% sure your job is finished! Your jobs will occasionally fail (for example, if the computing site is misconfigured, a network error occurs, the power goes out, ...). You can use `crab resubmit -d crabsubmit/the_job_dir` to resubmit the jobs, but not if you have deleted the directory. 
 {: .callout}
@@ -328,8 +329,8 @@ Now you can take a break and have some fun. Come back after couple hours or so a
 > ## Show/Hide
 > ```
 > [tonjes@cmslpc101 src]$ crab status crabsubmit/cmsdas_minbias_test0
-> CRAB project directory:		/uscms_data/d3/tonjes/CMSDAS2022/PreExercises/CMSSW_10_6_18/src/crabsubmit/cmsdas_minbias_test0
-> Task name:			211024_214242:belt_cmsdas_minbias_test0
+> CRAB project directory:		/uscms_data/d3/username/cmsdas/CMSSW_13_0_13_mcgen/src/crabsubmit/crab_cmsdas_minbias_test0
+> Task name:			231110_212908:username_crab_cmsdas_minbias_test0
 > Grid scheduler - Task Worker:	crab3@vocms0122.cern.ch - crab-prod-tw01
 > Status on the CRAB server:	SUBMITTED
 > Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/211024_214242%3Abelt_cmsdas_minbias_test0
@@ -354,11 +355,11 @@ Now you can take a break and have some fun. Come back after couple hours or so a
 >  * CPU eff: 7% min, 73% max, 22% ave
 >  * Waste: 1:15:29 (46% of total)
 > 
-> Log file is /uscms_data/d3/tonjes/CMSDAS2022/PreExercises/CMSSW_10_6_18/src/crabsubmit/cmsdas_minbias_test0/crab.log
+> Log file is /uscms_data/d3/username/cmsdas/CMSSW_13_0_13_mcgen/src/crabsubmit/crab_cmsdas_minbias_test0/crab.log
 > ```
 {: .solution}
 
-**Note**: If you specified T3_US_FNALLPC as your output directory, CRAB will write the output to your eos area. You can see them at something like `eosls /store/user/username/MinBias/MinBias_TuneCP5_13p6TeV-pythia8_cmsdas2024_test0/...`. 
+**Note**: If you specified T3_US_FNALLPC as your output directory, CRAB will write the output to your eos area. You can see them at something like `eosls /store/user/username/MinBias/MinBias_TuneCP5_13p6TeV-pythia8_cmsdas2025_test0/...`. 
 
 From the bottom of the output, you can see the name of the dataset and the DAS link to it. Congratulations! This is the your first CMS dataset.
 
