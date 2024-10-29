@@ -262,7 +262,7 @@ Below you also find the file:
 > NJOBS = 10  # This is not a configuration parameter, but an auxiliary variable that we use in the next line.
 > config.Data.totalUnits = config.Data.unitsPerJob * NJOBS
 > config.Data.publication = True
-> config.Data.outputDatasetTag = 'MinBias_TuneCP5_13p6TeV-pythia8_cmsdas2024_test0'
+> config.Data.outputDatasetTag = 'MinBias_TuneCP5_13p6TeV-pythia8_cmsdas2025_test0'
 >
 > config.section_("Site")
 > config.Site.storageSite = 'T3_US_FNALLPC'
@@ -371,10 +371,10 @@ There is some magic going on under the hood here. For example, if you were to si
 {: .challenge}
 
 # Processing MiniAOD with CRAB
-In this exercise, we will use CRAB to run the ZPeakAnalyzer module from the previous exercise. Remember that we were using an older CMSSW release, 10_6_30_patch1, so make sure to logout, login, and setup the correct release:
+In this exercise, we will use CRAB to run the ZPeakAnalyzer module from the previous exercise. Remember that we were using a different CMSSW release, `CMSSW_13_0_10_cmsdas`, so make sure to logout, login, and setup the correct release:
 
 ```shell
-cd ~/nobackup/cmsdas/CMSSW_10_6_30_patch1_cmsdas/src
+cd ~/nobackup/cmsdas/CMSSW_13_0_10_cmsdas/src
 cmsenv
 ```
 {: .source}
@@ -440,9 +440,9 @@ Most of this file is similar to the previous MC generation job, but there are a 
 
 > ## Show/Hide
 > ```
-> cmslpc154:~/cmsdas/2024/test/CMSSW_10_6_30_patch1_cmsdas/src/crabsubmit --> crab status -d crab_cmsdas_zpeak_test0/
+> cmslpc154:~/cmsdas/2025/test/CMSSW_13_0_10_cmsdas/src/crabsubmit --> crab status -d crab_cmsdas_zpeak_test0/
 > Your user certificate is going to expire in 1 days. See: https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid#ObtainingCert 
-> CRAB project directory:     /uscms_data/d3/dryu/cmsdas/2024/test/CMSSW_10_6_30_patch1_cmsdas/src/crabsubmit/crab_cmsdas_zpeak_test0
+> CRAB project directory:     /uscms_data/d3/dryu/cmsdas/2025/test/CMSSW_13_0_10_cmsdas/src/crabsubmit/crab_cmsdas_zpeak_test0
 > Task name:          231130_123342:dryu_crab_cmsdas_zpeak_test0
 > Grid scheduler - Task Worker:   crab3@vocms0121.cern.ch - crab-prod-tw01
 > Status on the CRAB server:  SUBMITTED
@@ -466,7 +466,7 @@ Most of this file is similar to the previous MC generation job, but there are a 
 >  * CPU eff: 6% min, 63% max, 28% ave
 >  * Waste: 3:15:10 (62% of total)
 > 
-> Log file is /uscms_data/d3/dryu/cmsdas/2024/test/CMSSW_10_6_30_patch1_cmsdas/src/crabsubmit/crab_cmsdas_zpeak_test0/crab.log
+> Log file is /uscms_data/d3/dryu/cmsdas/2025/test/CMSSW_13_0_10_cmsdas/src/crabsubmit/crab_cmsdas_zpeak_test0/crab.log
 > ```
 {: .solution}
 
@@ -495,7 +495,7 @@ You'll get something like this:
 > Additional report lumi files:
 >   Input dataset lumis (from DBS, at task submission time) written to inputDatasetLumis.json
 >   Lumis to process written to lumisToProcess.json
-> Log file is /uscms_data/d3/dryu/cmsdas/2024/test/CMSSW_10_6_30_patch1_cmsdas/src/crabsubmit/crab_cmsdas_zpeak_test0/crab.log
+> Log file is /uscms_data/d3/dryu/cmsdas/2025/test/CMSSW_13_0_10_cmsdas/src/crabsubmit/crab_cmsdas_zpeak_test0/crab.log
 > ```
 {: .solution}
 
@@ -526,7 +526,7 @@ Open the new `ZPeak.root` file , and plot the histogram. You should have many mo
 Note also that all CMS members using the Grid subscribe to the [Grid Annoucements CMS HyperNews forum](https://hypernews.cern.ch/HyperNews/CMS/get/gridAnnounce.html). Important CRAB announcements will be announced on the [CERN Computing Announcement HyperNews forum](https://hypernews.cern.ch/HyperNews/CMS/get/cernCompAnnounce.html). <br>
 
 <br><br>
-_Last reviewed: 2024/10/22 by David Yu_
+_Last reviewed: 2024/10/28 by David Yu_
 <br>
 
 [Set5_form]: https://forms.gle/t1AJ9tv8cTn7Q5gC8
