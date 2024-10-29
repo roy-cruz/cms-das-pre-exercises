@@ -190,9 +190,9 @@ Also, files are addressed using so-called "logical filenames" (LFNs), which you 
 The LFNs usually start with `/store/...`.
 [Click here](https://uscms.org/uscms_at_work/computing/LPC/usingEOSAtLPC.shtml) for the full documentation; here are a few essential commands. 
 
-- On cmslpc, the equivalent of `ls` is `eosls`: for example, `eosls /store/user/cmsdas/2024`. This is actually a cmslpc-specific alias for `eos root://cmseos.fnal.gov ls`; on other clusters, you'll have to use this full command. A useful flag is `eosls -alh`, which will print folder and file sizes. 
+- On cmslpc, the equivalent of `ls` is `eosls`: for example, `eosls /store/user/cmsdas/2025`. This is actually a cmslpc-specific alias for `eos root://cmseos.fnal.gov ls`; on other clusters, you'll have to use this full command. A useful flag is `eosls -alh`, which will print folder and file sizes. 
 - Similarly to `ls`, the cmslpc-specific equivalents of `mkdir` and `mv` are `eosmkdir` and `eosmv`. (You can do `alias eosmkdir` to see the full command behind the alias.)
-- The equivalent of `cp` is `xrdcp`: for example, `xrdcp root://cmseos.fnal.gov//store/user/cmsdas/2024/preexercises/DYJetsToLL_M50_NANOAOD.root .`. The `root://cmseos.fnal.gov` bit tells `xrdcp` which EOS instance to use (only one instance for cmslpc users; lxplus has several, e.g., `root://eoscms.cern.ch` for CMS data and `root://eosuser.cern.ch` for user data). 
+- The equivalent of `cp` is `xrdcp`: for example, `xrdcp root://cmseos.fnal.gov//store/user/cmsdas/2025/preexercises/DYJetsToLL_M50_NANOAOD.root .`. The `root://cmseos.fnal.gov` bit tells `xrdcp` which EOS instance to use (only one instance for cmslpc users; lxplus has several, e.g., `root://eoscms.cern.ch` for CMS data and `root://eosuser.cern.ch` for user data). 
 
 > ## Question 2.3
 > We will copy a small file from EOS to your nobackup area, containing 10,000 simulated $Z\rightarrow\mu^+\mu^-$ events in the CMS NanoAOD format. We will use this file in later exercises, so make sure not to lose track of it. 
@@ -201,7 +201,7 @@ The LFNs usually start with `/store/...`.
 > 
 > ```shell
 > cd ~/nobackup/cmsdas/
-> xrdcp root://cmseos.fnal.gov//store/user/cmsdas/2024/preexercises/DYJetsToLL_M50_NANOAOD.root .
+> xrdcp root://cmseos.fnal.gov//store/user/cmsdas/2025/preexercises/DYJetsToLL_M50_NANOAOD.root .
 > ```
 > {: .source}
 > 
