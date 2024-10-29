@@ -6,15 +6,15 @@ questions:
 - "Who can I contact if I need help with the pre-exercises?"
 ---
 
-These instructions are for attendees of the {{ site.year }} CMS Data Analysis School at the Fermilab LHC Physcis Center. 
+These instructions are for attendees of the {{ site.year }} CMS Data Analysis School at the Fermilab LHC Physcis Center. Others can follow the instructions specific to Fermilab site and computing access, but the chats and support sections will not be active outside the school.
 
 ## Mattermost (chat)
 
-=There is a dedicated Mattermost team, called [CMSDAS@LPC {{ site.year }}]({{ site.mattermost_invitelink }}), setup to facilitate communication and discussions via live chat (which is also archived). The channel is hosted by the [CERN Mattermost instance](https://mattermost.web.cern.ch).
+There is a dedicated Mattermost team, called [CMSDAS@LPC {{ site.year }}]({{ site.mattermost_invitelink }}), created to facilitate communication and discussions via live chat (which is also archived). Please join the team now! This is how most of the real-time communication will take place during the school.
 
-If you have never used Mattermost at CERN, please know that you will need your CERN login credentials (SSO) and you will need to join the private CMSDAS@LPC {{ site.year }} team in order to be able to see (or find using the search channels functionality) the channels setup for communications related to the school.
+If you have never used Mattermost at CERN, start by clicking on the links above, and login with CERN SSO (single sign-on). The link above should auto-join you to the CMSDAS "Team"; you can also find it by searching (click "+" in your list of teams; not channels, mind!). 
 
-If you already have used Mattermost at CERN, please know that when you click direct links to channels (as you will find below) that are within the CMSDAS@LPC {{ site.year }} team, you **may** be redirected to the last Mattermost team you used. If this happens, remember to click the [signup link to join the CMSDAS@LPC {{ site.year }} team](https://mattermost.web.cern.ch/signup_user_complete/?id=7hedxbi647dbbqouez9449g3ba)) to switch to the correct team from which you should be able to see the individual channels. If that still doesn't work, remove all cookies associated with cern.ch and restart your browser.
+If you already have used Mattermost at CERN, please know that when you click direct links to channels (as you will find below) that are within the CMSDAS@LPC {{ site.year }} team, you **may** be redirected to the last Mattermost team you used. If this happens, remember to click the [signup link to join the CMSDAS@LPC {{ site.year }} team]({{ site.mattermost_invitelink }})) to switch to the correct team from which you should be able to see the individual channels. If that still doesn't work, remove all cookies associated with cern.ch and restart your browser.
 
 The [PreExercisesChannel](https://mattermost.web.cern.ch/cmsdaslpc{{ site.year }}/channels/preexercises) will be available once you join or switch to the CMSDAS@LPC {{ site.year }} team!
 
