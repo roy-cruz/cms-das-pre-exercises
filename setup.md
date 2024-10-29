@@ -6,10 +6,11 @@ questions:
 - "Who can I contact if I need help with the pre-exercises?"
 ---
 
+These instructions are for attendees of the {{ site.year }} CMS Data Analysis School at the Fermilab LHC Physcis Center. 
 
 ## Mattermost (chat)
 
-=There is a dedicated Mattermost team, called [CMSDAS@LPC {{ site.year }}](https://mattermost.web.cern.ch/signup_user_complete/?id=7hedxbi647dbbqouez9449g3ba), setup to facilitate communication and discussions via live chat (which is also archived). The channel is hosted by the [CERN Mattermost instance](https://mattermost.web.cern.ch).
+=There is a dedicated Mattermost team, called [CMSDAS@LPC {{ site.year }}]({{ site.mattermost_invitelink }}), setup to facilitate communication and discussions via live chat (which is also archived). The channel is hosted by the [CERN Mattermost instance](https://mattermost.web.cern.ch).
 
 If you have never used Mattermost at CERN, please know that you will need your CERN login credentials (SSO) and you will need to join the private CMSDAS@LPC {{ site.year }} team in order to be able to see (or find using the search channels functionality) the channels setup for communications related to the school.
 
